@@ -26,23 +26,45 @@ Conclusions are limited to the tested implementations, inputs and hardware.
 ## Layout
 
 ```
-.
-├── config/experiment.json      # sizes, block sizes, densities, JVM controls, limits
-├── data/manifest.json          # seeds, nnz and SHA-256 of every input (the .bin files are NOT versioned)
-├── src/java/bd/
-│   ├── Main.java               # CLI + timing loop (one configuration per process)
-│   ├── DenseKernels.java       # ijk (baseline), ikj, blocked
-│   ├── Csr.java                # CSR format, dense->CSR, Gustavson CSR x CSR (own code, no library)
-│   └── MatrixIO.java
+optimized_sparse_matrix_multiplication/
+├── README.md
+├── requirements.txt              # numpy, pandas, matplotlib, psutil, scipy (solo verificación)
+├── .gitignore                    # data/*.bin, out/, __pycache__
+├── config/
+│   └── experiment.json           # tamaños, bloques, densidades, semillas, repeticiones, límites
+├── data/
+│   ├── manifest.json             # SHA-256 de cada fichero de entrada
+│   ├── dense/                    # A_n.bin, B_n.bin (float64, little-endian, row-major)
+│   └── sparse/                   # A_n_dXX.bin, B_n_dXX.bin (formato definido abajo)
+├── src/
+│   └── main/java/bd/
+│       ├── Main.java             # CLI: método, n, densidad, nº de repeticiones, warm-up
+│       ├── io/MatrixIO.java      # lectura de binarios dense y sparse
+│       ├── dense/
+│       │   ├── BasicIJK.java     # baseline reutilizado del Assignment 1
+│       │   ├── LoopReorderIKJ.java
+│       │   └── Blocked.java      # tamaño de bloque como parámetro
+│       ├── sparse/
+│       │   ├── CSRMatrix.java    # values[], colIdx[], rowPtr[]
+│       │   ├── CSRMultiply.java  # CSR x CSR (Gustavson), código propio
+│       │   └── Converter.java    # dense -> CSR (medido aparte)
+│       └── util/Checksum.java
 ├── scripts/
-│   ├── generate_inputs.py
-│   ├── verify_correctness.py   # run BEFORE benchmarking
-│   ├── run_benchmarks.py
-│   ├── analyze.py              # tables and figures
-│   └── capture_environment.py
-├── results/                    # raw_measurements.csv, run_status.csv, environment.json, tables/, figures/
-├── docs/environment.md
+│   ├── generate_inputs.py        # dense + sparse con PCG64, escribe manifest
+│   ├── verify_correctness.py     # identidad, ceros, 2x2, aleatorias vs NumPy/SciPy
+│   ├── run_benchmarks.py         # harness: un proceso por configuración, límites 300 s / 4 GB
+│   └── make_report_assets.py     # tablas y figuras desde el CSV
+├── results/
+│   ├── raw_measurements.csv
+│   ├── environment.json          # CPU, RAM, JDK, flags, estado de energía
+│   ├── tables/
+│   │   ├── correctness.csv
+│   │   ├── dense_summary.csv
+│   │   └── sparse_summary.csv
+│   └── figures/
 └── report/
+    ├── Assignment02_Surname_Report.pdf
+    └── main.tex (y .bib)
 ```
 
 ## Requirements
