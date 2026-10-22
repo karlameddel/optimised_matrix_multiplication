@@ -55,16 +55,14 @@ optimized_sparse_matrix_multiplication/
 │   ├── run_benchmarks.py         # harness: un proceso por configuración, límites 300 s / 4 GB
 │   └── make_report_assets.py     # tablas y figuras desde el CSV
 ├── results/
-│   ├── raw_measurements.csv
-│   ├── environment.json          # CPU, RAM, JDK, flags, estado de energía
-│   ├── tables/
-│   │   ├── correctness.csv
-│   │   ├── dense_summary.csv
-│   │   └── sparse_summary.csv
-│   └── figures/
-└── report/
-    ├── Assignment02_Surname_Report.pdf
-    └── main.tex (y .bib)
+    ├── raw_measurements.csv
+    ├── environment.json          # CPU, RAM, JDK, flags, estado de energía
+    ├── tables/
+    │   ├── correctness.csv
+    │   ├── dense_summary.csv
+    │   └── sparse_summary.csv
+    └── figures/
+
 ```
 
 ## Requirements
