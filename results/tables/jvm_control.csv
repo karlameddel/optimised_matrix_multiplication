@@ -1,0 +1,5 @@
+method,block,n,jvm_flags_control,median_default,median_control,control_over_default
+blocked,64,1000,no_superword,0.5103363,0.5532431,1.0840755399919622
+blocked,64,2000,no_superword,4.0784671,4.4365538,1.0877993351963047
+ikj,0,1000,no_superword,0.4976434,0.4898482,0.9843357713575625
+ikj,0,2000,no_superword,6.5626143,6.839281,1.0421580009661697
