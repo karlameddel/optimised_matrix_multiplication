@@ -1,0 +1,137 @@
+{
+  "_meta": {
+    "dense_distribution": "uniform [0, 1)",
+    "dense_seed_list": "[seed, n, tag]",
+    "dtype": "float64 little-endian",
+    "generator": "numpy.random.default_rng (PCG64)",
+    "layout": "row-major, no header",
+    "numpy_version": "2.2.6",
+    "seed": 42,
+    "sparse_distribution": "k=round(d*n^2) uniformly random positions without replacement, values uniform (0, 1]",
+    "sparse_seed_list": "[seed, n, tag, round(density*1e6)]"
+  },
+  "dense": {
+    "100": {
+      "A": "737e561e2e9566a6a4da0336df698fea014864192a6cf8fb67d0ce87ffd72537",
+      "B": "37ddcb9e59fdc266d3d1b26629ae7ed878d0340c473cf2bdc7c654906b858747"
+    },
+    "1000": {
+      "A": "21815a5d768d8bfd910f746aadb79ec08e6d1c272ee29b3e5b4d84d58148e3c1",
+      "B": "48fdd960b0f073dbd98097a1db1e874af6280ac2d77f0ffd00685d03b185cbeb"
+    },
+    "200": {
+      "A": "68c0524181d613610625f97fbd02e016876dddf9eb696b9b097898a6473b9efb",
+      "B": "e02f5c38f452c3b5881eea1c057351bb974ebb07734c8c91268b4840090e72ce"
+    },
+    "2000": {
+      "A": "c7d69464d1e02fc2e19b9555bfc7898cc7a9ca41b1809dcf0902b442e6457252",
+      "B": "9c42c0c4f89830ecfb3648aa88ceaf3db867cb8692d5d5b80fa83d9159bc526c"
+    },
+    "4000": {
+      "A": "fb0abc9a48d72f3161106a605c09661c0d631765699f71938ee42f50c56e94af",
+      "B": "4eb7bf818fd3e1e8d5c7f463d30cfb9570fb893dbe5afe57dfa59139636ee619"
+    },
+    "500": {
+      "A": "454af704d297f55aab377c432d122ea766b5811ad2f61fc4029f62682d6f6d4b",
+      "B": "dedb05c49a07ca3977fde42078f2ab6cb82a6d535e2918f7d891b2a35a41b6c9"
+    }
+  },
+  "sparse": {
+    "1000_d0.01": {
+      "A": {
+        "nnz": 10000,
+        "sha256": "883224ba26b0e3a97e6de656cdd20a5cfe9b877d0355c23f0f4b355b06504b15"
+      },
+      "B": {
+        "nnz": 10000,
+        "sha256": "9f7566d895cc04e1f27976774334d44178103adece2a1f91da0e727ee12bfd55"
+      },
+      "density": 0.01,
+      "expected_density_C": 0.09516710644144377
+    },
+    "2000_d0.001": {
+      "A": {
+        "nnz": 4000,
+        "sha256": "666320c1fa133d1b94f3c4d5836358cd7ac2c058b2fdf984600502434041f713"
+      },
+      "B": {
+        "nnz": 4000,
+        "sha256": "9b11d32b718aa2331ac3a2f95792f73fb84a97b9f204318cd91d09f81cfb93c7"
+      },
+      "density": 0.001,
+      "expected_density_C": 0.001998002330727
+    },
+    "2000_d0.005": {
+      "A": {
+        "nnz": 20000,
+        "sha256": "c23285fc00f455ec945365e70f290b6e31f54127653796eeef539daa09fdb17d"
+      },
+      "B": {
+        "nnz": 20000,
+        "sha256": "f245ecc77270b1596eb69a992c64c271b8d97aecfde543741c6c3d90c3b066b4"
+      },
+      "density": 0.005,
+      "expected_density_C": 0.048771170027499755
+    },
+    "2000_d0.01": {
+      "A": {
+        "nnz": 40000,
+        "sha256": "80e5be8894b2871387b9077294593b9d7cfdaac879e51f759bf8b83b55f883ff"
+      },
+      "B": {
+        "nnz": 40000,
+        "sha256": "0fecf13fed1b3d029bf8cb0f127bceedd22f8b6c34819a334ac0beb9218f2845"
+      },
+      "density": 0.01,
+      "expected_density_C": 0.18127743473445046
+    },
+    "2000_d0.05": {
+      "A": {
+        "nnz": 200000,
+        "sha256": "9140e1700f3e5eef9788b1cf39f9f68abe72d38cefcb793b5ac34ca9a2e8d14c"
+      },
+      "B": {
+        "nnz": 200000,
+        "sha256": "6c648bd33c6e396a9e9b71034dae40639da1b8ecb9c64e15ac4617f3f7ded670"
+      },
+      "density": 0.05,
+      "expected_density_C": 0.9933041037231962
+    },
+    "2000_d0.1": {
+      "A": {
+        "nnz": 400000,
+        "sha256": "bb28f59b43f2042368b150894bd924cee315a1bfee9d72f19a5672be5d2b67bf"
+      },
+      "B": {
+        "nnz": 400000,
+        "sha256": "0876ca863333fbf79c2712f1b5c57099cf4e2b8b90651c5babcc211cd064c257"
+      },
+      "density": 0.1,
+      "expected_density_C": 0.9999999981362434
+    },
+    "4000_d0.01": {
+      "A": {
+        "nnz": 160000,
+        "sha256": "f1495db0f75e4bfd178d28f641e05189af63bb0a8eef06e74134392a2826f5e0"
+      },
+      "B": {
+        "nnz": 160000,
+        "sha256": "22ad4e13b09074695f46a3ec7bfd0264f0413032e8f91f0c2363055f144ab579"
+      },
+      "density": 0.01,
+      "expected_density_C": 0.32969336112499803
+    },
+    "500_d0.01": {
+      "A": {
+        "nnz": 2500,
+        "sha256": "87d631114eb79ca3338064d14124274489e2221cfff333f9651781b55c91f0fb"
+      },
+      "B": {
+        "nnz": 2500,
+        "sha256": "1d6fc96c430938d14b2467cac76cd8a25fe4806cb6364d4996348832c9fa6bb0"
+      },
+      "density": 0.01,
+      "expected_density_C": 0.048772953728419166
+    }
+  }
+}
