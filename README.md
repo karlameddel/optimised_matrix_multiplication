@@ -18,7 +18,7 @@ Conclusions are limited to the tested implementations, inputs and hardware.
 
 | Reused | Where | Note |
 |---|---|---|
-| Baseline kernel (i-j-k) | `src/main/java/bd/dense/BasicIJK.java` | Same loop and indexing as `MatMul.matmul` of Assignment 1 (repo `basic_matrix_multiplication`, commit `<FILL IN: git rev-parse --short HEAD>`) |
+| Baseline kernel (i-j-k) | `src/main/java/bd/dense/BasicIJK.java` | Same loop and indexing as `MatMul.matmul` of Assignment 1 |
 | Dense input matrices | `scripts/generate_inputs.py` | Same seeds `[42, n, tag]` -> same bytes; `--check-a1` compares SHA-256 with the Assignment 1 manifest |
 | Harness protocol | `scripts/run_benchmarks.py` | One process per configuration, probe + timing run, limits 300 s / 4 GB, median and IQR |
 | Correctness criterion | `scripts/verify_correctness.py` | `rtol = 1e-9`, `atol = 1e-12`, NumPy as reference only |
