@@ -7,7 +7,7 @@
 | OS | Windows 11 Home 10.0.26200 |
 | Java | OpenJDK 21.0.6 (Temurin) -- CONFIRM, default JIT, default GC (record `#gc` from the output) |
 | Python / NumPy / pandas / matplotlib / psutil | 3.11.9 / 2.2.6 / 3.0.0 / 3.10.6 / 7.0.0 |
-| **Power state** | **Running battery -- RECORD BEFORE RUNNING** |
+| **Power state** | **Plugged in** |
 
 ## Settings
 - JVM: `java -Xmx4g -cp build bd.Main ...`, default JIT and GC. Control runs add `-XX:-UseSuperWord`.
