@@ -115,7 +115,7 @@ Methods: `ijk`, `ikj`, `blocked` (uses `--block`), `csr`.
 | Budgets | 300 s and 4 GB per run; violations recorded as results |
 | Control | Same dense kernels with `-XX:-UseSuperWord` (JIT auto-vectorisation off) to separate the memory-access effect from SIMD |
 
-Results, analysis and limitations are in the PDF report (`report/`).
+Results, analysis and limitations are in the PDF report.
 
 ## Output files
 
